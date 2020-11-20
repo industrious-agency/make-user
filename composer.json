@@ -1,0 +1,55 @@
+{
+    "name": "industrious/make-user",
+    "description": "Adds a command to make a Laravel user with simple parameters (prompts) for name, email and password.",
+    "keywords": [
+        "industrious",
+        "make-user"
+    ],
+    "homepage": "https://github.com/industrious/make-user",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Thomas",
+            "email": "christian@industrious.agency",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Industrious\\MakeUser\\": "src",
+            "Industrious\\MakeUser\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Industrious\\MakeUser\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Industrious\\MakeUser\\MakeUserServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
